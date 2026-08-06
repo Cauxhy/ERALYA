@@ -3,6 +3,7 @@ import { Manrope, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import "./header.css";
 import "./new-pages.css";
+import "./mobile-menu.css";
 
 const manrope = Manrope({variable:"--font-sans",subsets:["latin"]});
 const mono = JetBrains_Mono({variable:"--font-mono",subsets:["latin"],weight:["500","700"]});
