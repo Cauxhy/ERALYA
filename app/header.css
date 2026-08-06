@@ -1,0 +1,21 @@
+main{padding-top:80px}
+.site-header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96)}
+.brand img{width:46px;height:46px;object-fit:contain;filter:drop-shadow(0 1px 1px rgba(0,0,0,.08))}
+
+@media(max-width:900px){
+ .mobile-menu{display:block}
+ .mobile-menu summary{list-style:none;width:42px;height:42px;border:1px solid #d9e1ef;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;background:#fff}
+ .mobile-menu summary::-webkit-details-marker{display:none}
+ .mobile-menu summary span{display:block;width:20px;height:2px;background:var(--primary);border-radius:2px;transform-origin:left center;transition:.25s}
+ .mobile-menu[open] summary span:first-child{transform:rotate(45deg) translate(1px,-2px)}
+ .mobile-menu[open] summary span:nth-child(2){opacity:0;transform:translateX(8px)}
+ .mobile-menu[open] summary span:last-child{transform:rotate(-45deg) translate(0,2px)}
+ .mobile-menu nav{position:fixed;left:0;right:auto;top:80px;bottom:0;background:#fff;box-shadow:10px 0 30px rgba(0,25,70,.14);border-radius:0;padding:26px 24px;width:min(82vw,330px);display:flex;flex-direction:column;gap:4px;animation:menuFromLeft .32s cubic-bezier(.2,.8,.2,1)}
+ .mobile-menu nav:after{content:"";position:fixed;left:min(82vw,330px);right:0;top:80px;bottom:0;background:rgba(15,28,50,.3);z-index:-1}
+ .menu-brand{display:flex;align-items:center;gap:9px;color:var(--primary);font-size:19px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+ .menu-brand img{width:40px;height:40px;object-fit:contain}
+ .mobile-menu nav>a:not(.mobile-join){padding:14px 12px;border-radius:7px;color:var(--muted);font-weight:700;font-size:15px;transform:translateX(0);transition:.2s}
+ .mobile-menu nav>a:not(.mobile-join):hover,.mobile-menu nav>a.active{background:#edf3ff;color:var(--primary);transform:translateX(6px)}
+ .mobile-join{margin-top:auto;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;padding:14px 16px;border-radius:8px;font-weight:700;text-align:center}
+}
+@keyframes menuFromLeft{from{transform:translateX(-100%);opacity:.4}to{transform:translateX(0);opacity:1}}
