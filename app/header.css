@@ -1,15 +1,14 @@
 main{padding-top:80px}
 .site-header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96)}
 .brand img{width:46px;height:46px;object-fit:contain;filter:drop-shadow(0 1px 1px rgba(0,0,0,.08))}
+.desktop-nav a{position:relative;padding:8px 0;border-bottom:0}
+.desktop-nav a::after{content:"";position:absolute;left:0;right:0;bottom:1px;height:2px;background:var(--primary);transform:scaleX(0);transform-origin:center;transition:transform .2s}
+.desktop-nav a:hover::after,.desktop-nav a.active::after{transform:scaleX(1)}
 
 @media(max-width:900px){
  .mobile-menu{display:block}
- .mobile-menu summary{list-style:none;width:42px;height:42px;border:1px solid #d9e1ef;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;background:#fff}
+ .mobile-menu summary{list-style:none;width:auto;height:auto;border:0;border-radius:0;display:block;cursor:pointer;background:transparent;color:var(--primary);font-size:27px;line-height:1}
  .mobile-menu summary::-webkit-details-marker{display:none}
- .mobile-menu summary span{display:block;width:20px;height:2px;background:var(--primary);border-radius:2px;transform-origin:left center;transition:.25s}
- .mobile-menu[open] summary span:first-child{transform:rotate(45deg) translate(1px,-2px)}
- .mobile-menu[open] summary span:nth-child(2){opacity:0;transform:translateX(8px)}
- .mobile-menu[open] summary span:last-child{transform:rotate(-45deg) translate(0,2px)}
  .mobile-menu nav{position:fixed;left:0;right:auto;top:80px;bottom:0;background:#fff;box-shadow:10px 0 30px rgba(0,25,70,.14);border-radius:0;padding:26px 24px;width:min(82vw,330px);display:flex;flex-direction:column;gap:4px;animation:menuFromLeft .32s cubic-bezier(.2,.8,.2,1)}
  .mobile-menu nav:after{content:"";position:fixed;left:min(82vw,330px);right:0;top:80px;bottom:0;background:rgba(15,28,50,.3);z-index:-1}
  .menu-brand{display:flex;align-items:center;gap:9px;color:var(--primary);font-size:19px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line)}
