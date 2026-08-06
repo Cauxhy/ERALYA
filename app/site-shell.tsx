@@ -8,7 +8,7 @@ const nav=[["accueil","/","Home"],["programmes","/programmes","Formations"],["so
 export function SiteShell({children,active}:{children:ReactNode;active:string}){return <>
  <header className="site-header"><div className="container nav-wrap">
   <Link className="brand" href="/"><Image src="/veralya-logo-hq.png" alt="Logo Veralya" width={56} height={56} priority/><strong>VERALYA</strong></Link>
-  <nav className="desktop-nav" aria-label="Navigation principale">{nav.map(([id,url,label])=><Link className={active===id?"active":""} href={url} key={id}>{label}</Link>)}</nav>
+  <nav className="desktop-nav" aria-label="Navigation principale">{nav.map(([id,url,label])=><Link className={active===id?"active":""} href={url} key={id}><span>{label}</span></Link>)}</nav>
   <Link className="button primary nav-cta" href="/contact">Rejoindre</Link>
   <details className="mobile-menu"><summary aria-label="Ouvrir le menu">☰</summary><nav><div className="menu-brand"><Image src="/veralya-logo-hq.png" alt="" width={44} height={44}/><strong>VERALYA</strong></div>{nav.map(([id,url,label])=><Link className={active===id?"active":""} href={url} key={id}>{label}</Link>)}<Link className="mobile-join" href="/contact">Rejoindre <Arrow/></Link></nav></details>
  </div></header>{children}<Footer/></>}

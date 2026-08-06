@@ -1,9 +1,9 @@
 main{padding-top:80px}
 .site-header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96)}
 .brand img{width:46px;height:46px;object-fit:contain;filter:drop-shadow(0 1px 1px rgba(0,0,0,.08))}
-.desktop-nav a{position:relative;padding:8px 0;border-bottom:0}
-.desktop-nav a::after{content:"";position:absolute;left:0;right:0;bottom:1px;height:2px;background:var(--primary);transform:scaleX(0);transform-origin:center;transition:transform .2s}
-.desktop-nav a:hover::after,.desktop-nav a.active::after{transform:scaleX(1)}
+header.site-header .desktop-nav a{padding:8px 0!important;border:0!important}
+header.site-header .desktop-nav a span{display:inline-block;padding-bottom:3px;border-bottom:2px solid transparent;line-height:20px;transition:color .2s,border-color .2s}
+header.site-header .desktop-nav a:hover span,header.site-header .desktop-nav a.active span{border-bottom-color:var(--primary)}
 
 @media(max-width:900px){
  .mobile-menu{display:block}
