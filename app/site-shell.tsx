@@ -3,7 +3,7 @@ import Link from "next/link";
 import type {ReactNode} from "react";
 
 export function Arrow(){return <span className="arrow" aria-hidden="true">→</span>}
-const nav=[["accueil","/","Home"],["programmes","/programmes","Formations"],["solutions","/solutions","Coaching"],["apropos","/a-propos","À Propos"],["contact","/contact","Contact"]];
+const nav=[["accueil","/","Home"],["coaching","/coaching","Coaching"],["apropos","/a-propos","À Propos"],["contact","/contact","Contact"]];
 
 export function SiteShell({children,active}:{children:ReactNode;active:string}){
  return <>
